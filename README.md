@@ -4,3 +4,4 @@ This Source Generator generates POJO's based on your appsettings.json files. It 
 
 See this blogpost for more information:
 
+https://albertromkes.com/2020/11/04/a-source-generator-for-your-appsettings-json/
