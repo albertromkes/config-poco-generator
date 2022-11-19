@@ -159,7 +159,7 @@ namespace ConfigGenerator
 
                     if (!string.IsNullOrEmpty(contentOfFile))
                     {
-                        var deserializedJson = DeserializeToDictionary(contentOfFile);
+                        var deserializedJson = DeserializeToDictionary(contentOfFile ?? "");
                         MergeDictionaries(resultConfigurationDictionary, deserializedJson);
                     }
                 }
@@ -168,7 +168,7 @@ namespace ConfigGenerator
         
         private static Dictionary<string, object> DeserializeToDictionary(string configJson)
         {
-            var configValues = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(configJson);
+            var configValues = JsonSerializer.Deserialize<Dictionary<string, JsonElement>>(configJson) ?? new Dictionary<string, JsonElement>();
             
             var finalConfigJson = new Dictionary<string, object>();
             foreach (KeyValuePair<string, JsonElement> configValue in configValues)
