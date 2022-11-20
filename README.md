@@ -19,6 +19,8 @@ You can add as many appsettings files as you want :)
 3) Register your config in the DI container: `builder.Services.Configure<ApplicationConfig.MyAppConfig>(builder.Configuration);`
 4) Inject the config in your constructor: `IOptions<ApplicationConfig.MyAppConfig> options`
 
+:warning: **You  may have to restart Visual Studio after installing this NuGet package!**
+
 See this blogpost for more information:
 
 https://albertromkes.com/2020/11/04/a-source-generator-for-your-appsettings-json/
