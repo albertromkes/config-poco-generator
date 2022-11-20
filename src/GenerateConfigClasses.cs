@@ -59,7 +59,11 @@ namespace ConfigGenerator
                 }
                 else
                 {
-                    sourceBuilder.Append($"public string {NormalizePropertyName(key)} {{ get; set; }}");
+                    if (value is JsonElement element1)
+                    {
+                        var propertyType = GetPropertyTypeNameBasedOnValue(element1);
+                        sourceBuilder.Append($"public {propertyType} {NormalizePropertyName(key)} {{ get; set; }}");
+                    }                    
                 }
             }
 

@@ -5,6 +5,7 @@
 		<LangVersion>preview</LangVersion>
 		<Nullable>enable</Nullable>
 		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -13,16 +14,18 @@
 		<RepositoryUrl>https://github.com/albertromkes/config-poco-generator</RepositoryUrl>
 		<Description>Generates POCO classes from your appsettingsfiles</Description>
 		<Authors>Albert Romkes</Authors>
-		<Version>1.0.2</Version>
+		<Version>1.0.3</Version>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+		<None Include="..\README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0" PrivateAssets="all" />
-		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4-beta1.22518.1">
+		<PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.4.0" PrivateAssets="all" GeneratePathProperty="true" />
+		<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.4-beta1.22518.1" GeneratePathProperty="true">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
