@@ -6,6 +6,7 @@
 		<Nullable>enable</Nullable>
 		<EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
 		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+		<IncludeBuildOutput>false</IncludeBuildOutput>
 	</PropertyGroup>
 
 	<PropertyGroup>
@@ -15,7 +16,7 @@
 		<Description>Generates POCO classes from your appsettingsfiles</Description>
 		<Authors>Albert Romkes</Authors>
 		<Version>1.0.3</Version>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>		
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -55,8 +56,5 @@
 			<TargetPathWithTargetPlatformMoniker Include="@(ResolvedCompileFileDefinitions)" IncludeRuntimeDependency="false" />
 		</ItemGroup>
 	</Target>
-
-	
-
 
 </Project>

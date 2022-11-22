@@ -13,7 +13,7 @@ namespace ConfigGenerator
     {
         public void Execute(GeneratorExecutionContext context)
         {
-            var configurationDictionary = new Dictionary<string, object>();
+            var configurationDictionary = new Dictionary<string, object>();            
             
             LoadAndMergeConfigFiles(context, configurationDictionary);
 
@@ -43,7 +43,7 @@ namespace ConfigGenerator
                 {
             ");
 
-            //foreach (var (key, value) in topLevelProperties)
+            
             foreach(var item in topLevelProperties)
             {
                 var value = item.Value;
@@ -89,12 +89,11 @@ namespace ConfigGenerator
 
             sourceBuilder.Append(configSectionNamespaceSb.ToString());
 
-            context.AddSource("MyAppConfig", SourceText.From(sourceBuilder.ToString(), Encoding.UTF8));
+            context.AddSource("MyAppConfig.g.cs", SourceText.From(sourceBuilder.ToString(), Encoding.UTF8));
         }
 
         public void Initialize(GeneratorInitializationContext context)
-        {
-            
+        {            
         }
 
         private static void BuildConfigClass(KeyValuePair<string, object> classInfo, StringBuilder sb)
