@@ -1,6 +1,6 @@
 ### Source Generator for generating POCO classes based on your appsettings.json files ###
 
-[![.github/workflows/release.yml](https://github.com/albertromkes/config-poco-generator/actions/workflows/release.yml/badge.svg)](https://github.com/albertromkes/config-poco-generator/actions/workflows/release.yml)
+[![NuGet Badge](https://buildstats.info/nuget/configgenerator)](https://www.nuget.org/packages/configgenerator/)
 
 This Source Generator generates POCO's based on your appsettings.json files. It also supports multiple settings files: appsettings.json + appsettings.Development.json + appsettings.Production.json, etc.
 
