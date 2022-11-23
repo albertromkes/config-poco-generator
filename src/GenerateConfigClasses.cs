@@ -135,7 +135,7 @@ namespace ConfigGenerator
         {
             return value.ValueKind switch
             {
-                JsonValueKind.Number => "int",
+                JsonValueKind.Number => value.TryGetInt32(out _) ? "int" : "double",
                 JsonValueKind.True or JsonValueKind.False => "bool",
                 _ => "string",
             };

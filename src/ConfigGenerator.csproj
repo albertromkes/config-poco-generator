@@ -15,7 +15,7 @@
 		<RepositoryUrl>https://github.com/albertromkes/config-poco-generator</RepositoryUrl>
 		<Description>Generates POCO classes from your appsettingsfiles</Description>
 		<Authors>Albert Romkes</Authors>
-		<Version>1.0.3</Version>
+		<Version>1.0.4</Version>
 		<PackageReadmeFile>README.md</PackageReadmeFile>		
 	</PropertyGroup>
 

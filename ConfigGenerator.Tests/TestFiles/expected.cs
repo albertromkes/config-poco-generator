@@ -9,6 +9,9 @@ namespace ApplicationConfig
     public class MyAppConfig
     {
         public bool DuplicateEntryOnlyShowsOnce { get; set; }
+        public int IntValue { get; set; }
+        public double DoubleValue { get; set; }
+        public IEnumerable<double> ArrayWithDoubles { get; set; }
         public IEnumerable<string> ArrayWithStrings { get; set; }
         public IEnumerable<int> ArrayWithInts { get; set; }
         public IEnumerable<bool> ArrayWithBools { get; set; }
@@ -25,4 +28,3 @@ namespace ApplicationConfigurationSections
 
 
 }
-
