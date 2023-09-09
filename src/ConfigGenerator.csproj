@@ -10,13 +10,12 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<PackageId>ConfigurationGenerator</PackageId>
+		<PackageId>ConfigGenerator</PackageId>
 		<RepositoryType>git</RepositoryType>
-		<RepositoryUrl>https://github.com/pattrigue/config-poco-generator</RepositoryUrl>
-		<Description>Generates POCO classes from your appsettingsfiles.
-Fork of https://github.com/albertromkes/config-poco-generator.</Description>
-		<Authors>Albert Romkes &amp; Pattrigue</Authors>
-		<Version>1.0.5</Version>
+		<RepositoryUrl>https://github.com/albertromkes/config-poco-generator</RepositoryUrl>
+		<Description>Generates POCO classes from your appsettingsfiles</Description>
+		<Authors>Albert Romkes</Authors>
+		<Version>1.0.4</Version>
 		<PackageReadmeFile>README.md</PackageReadmeFile>		
 	</PropertyGroup>
 
