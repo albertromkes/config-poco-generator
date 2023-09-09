@@ -135,10 +135,19 @@ namespace ConfigGenerator
         {
             return value.ValueKind switch
             {
-                JsonValueKind.Number => value.TryGetInt32(out _) ? "int" : "double",
+                JsonValueKind.Number => DetermineNumericType(value),
                 JsonValueKind.True or JsonValueKind.False => "bool",
                 _ => "string",
             };
+        }
+        
+        private static string DetermineNumericType(JsonElement value)
+        {
+            if (value.TryGetInt32(out _)) return "int";
+            if (value.TryGetInt64(out _)) return "long";
+            if (value.TryGetUInt64(out _)) return "ulong";
+
+            return "double"; 
         }
 
         private static string NormalizePropertyName(string originalName)
